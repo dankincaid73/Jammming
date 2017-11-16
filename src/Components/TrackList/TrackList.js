@@ -1,8 +1,12 @@
+// Import Components, and CSS
 import React, { Component } from 'react';
 import './css/TrackList.css';
 import { Track } from '../Track/Track';
 
+// Create the TrackList Component
 export class TrackList extends Component {
+  // Render the TrackList component and map all tracks
+  // from the tracks array to a Track component 
   render() {
     return (
       <div className="TrackList">
