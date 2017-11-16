@@ -1,17 +1,20 @@
+// Import Components, and CSS
 import React, { Component } from 'react';
 import './css/PlayList.css';
 import { TrackList } from '../TrackList/TrackList';
 
+// Create and  export Playlist Component
 export class PlayList extends Component {
   constructor(props) {
     super(props);
+    // Bind methods to the proper 'this'
     this.handleNameChange = this.handleNameChange.bind(this);
   }
-
+  // Return value from an event target and update the name state
   handleNameChange(event) {
     this.props.onNameChange(event.target.value);
   }
-
+  // Render the Playlist Component and pass props to <TrackList />
   render() {
     return (
       <div className="Playlist">
